@@ -12,6 +12,7 @@ def summary_maken(posixlijst, aantal_per_rol, rolnummer):
     df_rol = pd.DataFrame(rol, columns=kolomnaamlijst,)
 
     begin = df_rol.iat[0, 0]
+    testkolom = df_rol.iloc[0].iat[3]
     eind_positie_rol = (aantal_per_rol) - 1
     eind = df_rol.iat[eind_positie_rol, 0]
     # data_uit_kolom4 = df_rol.loc[0:1]
@@ -22,12 +23,12 @@ def summary_maken(posixlijst, aantal_per_rol, rolnummer):
 
 
     begin_nummer = pd.DataFrame(
-        [(".", "begin nummer", f"{begin}", "") for x in range(1)],
+        [(".", "begin nummer", f"{begin}", f"{testkolom}") for x in range(1)],
         columns=kolomnaamlijst,)
 
 
     eind_nummer = pd.DataFrame(
-        [(".", "eind nummer",f"{eind}","") for x in range(1)],
+        [(".", "eind nummer",f"{eind}",f"{testkolom}") for x in range(1)],
         columns=kolomnaamlijst,)
 
 

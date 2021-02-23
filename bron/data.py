@@ -13,17 +13,18 @@ import bron.lijst_functies as from_functies
 
 
 
-order_nummer = "202101374 VDP_6"  # wordt in GUI --> filenaam.stem
-aantal_per_rol = 300
-begin_rolnummer = 855 # count zero, will fix default = 0 voor rol 1
-mes = 3
-formaat_hoogte = 51
+order_nummer = "202109916 vdp2 rol van 2000"  # wordt in GUI --> filenaam.stem
+aantal_per_rol = 2000
+begin_rolnummer = 0 # count zero, will fix default = 0 voor rol 1
+mes = 6
+etiketten_Y = 42
+formaat_hoogte = 20
 wikkel = from_functies.wikkel(aantal_per_rol,formaat_hoogte,76)  # +3 = 10
 
 print(f'wikkel = {wikkel+1} inclusief sluit etiket')
 # formule voor uitrekenen wikkel
 # geef keuze
-etiketten_Y = 6
+
 
 def makenvoorinloop():
     pass

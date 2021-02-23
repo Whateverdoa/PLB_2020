@@ -151,6 +151,7 @@ def horizontaal_samenvoegen(opgebroken_posix_lijst, map_uit, meswaarde):
 
 
 def stapel_df_baan(naam, lijstin, ordernummer, map_uit):
+
     stapel_df = []
     for lijst_naam in lijstin:
         # print(lijst_naam)
@@ -158,7 +159,7 @@ def stapel_df_baan(naam, lijstin, ordernummer, map_uit):
             f"{lijst_naam}", ";", dtype="str", index_col=0)
         stapel_df.append(to_append_df)
     pd.concat(stapel_df, axis=0).to_csv(f"{map_uit}/{naam}_{ordernummer}.csv", ";", "str")
-    return pd.DataFrame(stapel_df)
+    return pd.concat(stapel_df, axis=0)
 
 
 def kolom_naam_gever_num_pdf_omschrijving(mes=1):

@@ -1,7 +1,7 @@
 # import pandas as pd
 from pathlib import Path
 
-file = r"file_in/202101374 sscc_300_000 deel6.csv"
+file = r"file_in/202109916 r v 2000.csv"
 
 # excel_file= r"file_in/202011034/202011034samen.xlsx"
 wdir = Path.cwd()
